@@ -13,11 +13,12 @@ class Apuesta:
        raise ValueError("No hay tantas fichas (no se pueden sacar {cuantas} quedan {self.fichas})  ")
       self.fichas = self.fichas - cuantas
 
-    #def tenerFicha (self):
-    #  d
-    #def estaVacia(self):
-     #  d
-
+    def tieneFicha(self, cuantas=1):
+       return (self.fichas >= cuantas )
+    
+    def estaVacia(self):
+       return (self.fichas == 0)
+    
 a = Apuesta()
 print(a)
 a.ponerFicha()
